@@ -138,7 +138,7 @@ function Navbar() {
                         src="https://res-console.cloudinary.com/imagniecloudstorage/media_explorer_thumbnails/a424381d50d0e3f12ba86e123d2806c2/detailed"
                         alt="User"
                       />{" "}
-                      {user.user.email}
+                      {user?.user?.email}
                     </Link>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ function Navbar() {
                       style={{ color: mode === "dark" ? "white" : "" }}
                       className=""
                     >
-                      {user.user.email}
+                      {user?.user?.email}
                     </p>
                   </a>
                 </div>

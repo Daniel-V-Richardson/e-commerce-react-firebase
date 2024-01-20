@@ -1,15 +1,12 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import myContext from "../../context/data/myContext";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../fireabase/FirebaseConfig";
 import { toast } from "react-toastify";
 import Loader from "../../components/loader/Loader";
 
 function Login() {
-  const context = useContext(myContext);
-  const { loading, setLoading } = context;
-
+  const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -34,7 +31,7 @@ function Login() {
       setLoading(false);
     } catch (error) {
       console.log(error);
-      setLoading(loading);
+      setLoading(false);
     }
   };
 

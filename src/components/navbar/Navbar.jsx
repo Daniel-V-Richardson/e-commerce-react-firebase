@@ -17,8 +17,7 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   const user = JSON.parse(localStorage.getItem("user"));
-
-  // console.log(user.user.email)
+  console.log(user.user.email);
 
   const logout = () => {
     localStorage.clear("user");
